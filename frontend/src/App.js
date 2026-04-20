@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
+import "./App.css";
 
 function App() {
+  const [refresh, setRefresh] = useState(false);
+  const [dark, setDark] = useState(true);
+
+  const reload = () => setRefresh(!refresh);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={dark ? "app dark" : "app light"}>
+      
+      <div className="top-bar">
+        <h1>Task Manager</h1>
+
+        <label className="switch">
+          <input
+            type="checkbox"
+            checked={dark}
+            onChange={() => setDark(!dark)}
+          />
+          <span className="slider"></span>
+        </label>
+      </div>
+
+      <TaskForm refresh={reload} />
+      <TaskList refresh={refresh} />
     </div>
   );
 }
