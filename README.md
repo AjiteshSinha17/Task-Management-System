@@ -1,4 +1,18 @@
-﻿# Task-Management-System
+
+ <img width="1918" height="861" alt="wdds" src="https://github.com/user-attachments/assets/0bf5b7f5-23c8-4f1a-b8d0-7e7ba912ad52" />
+
+ <img width="1906" height="562" alt="11sr" src="https://github.com/user-attachments/assets/362946f6-ce92-4e2b-bc26-e31c765aa340" />
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ # Task-Management-System
 
 ---
 
